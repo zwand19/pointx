@@ -10,7 +10,7 @@ $(document).ready(function(){
     $.ajax({
       url: 'https://formspree.io/f/xkgwngbq',
       method: "POST",
-      data: {message: $('textarea').val(), email: $('#email-input').val(), name: $('#name-input').val(), subject: 'Point X Contact'},
+      data: {message: $('textarea').val(), email: $('#email-input').val(), _replyto: $('#email-input').val(), name: $('#name-input').val(), subject: 'Point X Contact'},
       dataType: 'json',
       success: function(data){
         if (data.ok || data.success) {
